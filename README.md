@@ -41,7 +41,6 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 8. Create novels! c:
 
-
 <details>
 
 <summary>Running from Source</summary>
@@ -55,6 +54,8 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 3. Press F5 to Run
 
 4. This will open a new instance of VSCode with the extension loaded. You should be able to create and open files here.
+
+Building from source would require installation of `vsce` npm package. You should be able to run `vsce package` in this repo's folder and get a packaged extension file (`.vsix`).
 
 </details>
 
