@@ -40,10 +40,9 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 Inconsistent highlighting of certain instances of [].
 
-## Release Notes
+<!-- LICENSE -->
+## License
 
-Initial release of the extension.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-### 1.0.0
-
-Initial release of VNF Scripting Language
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
