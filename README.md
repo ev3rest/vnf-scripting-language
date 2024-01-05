@@ -13,6 +13,7 @@ This extension enables syntax highlighting for VNF scripting laguage files.
     Select `Install from VSIX` from the dropdown menu. This will open a file dialog.
 
 ![Step 2 Part A](images/2a.jpg)
+<space>
 ![Step 2 Part B](images/2b.jpg)
 
 3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Open.
@@ -24,9 +25,17 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 ![Step 4](images/4.jpg)
 
 5. Once the installation is complete, you may be prompted to reload Visual Studio Code to enable the newly installed extension. Click Reload Now if prompted.
+
 6. Click on **File** - **New File**.
-7. Click on **Select a language** and type in`VNF`.
-8. Type out and create novels!
+
+![Step 6](images/6.jpg)
+
+7. Type in`VNF` and select the only available option.
+
+![Step 7](images/7.jpg)
+
+8. [!TIP]
+    Type out and create novels!
 
 ## Known Issues
 
