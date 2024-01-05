@@ -11,9 +11,9 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 ### Installation
 
-<summary>Installation Steps</summary>
-
 <details>
+
+<summary>Installation Steps</summary>
 
 1. In Visual Studio Code, click on the square icon on the left sidebar to open the Extensions view. Alternatively, you can use the shortcut `Ctrl+Shift+X` (or `Cmd+Shift+X` on Mac).
 
