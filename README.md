@@ -17,12 +17,20 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
     Select `Install from VSIX` from the dropdown menu. This will open a file dialog.
 
-![Step 2 Part 1](images/2.jpg)
-![Step 2 Part 2](images/3.jpg)
+<details>
+
+<summary>Step 2 Screenshots</summary>
+
+![Step 2 Part A](images/2a.jpg)
+![Step 2 Part B](images/2b.jpg)
+</details>
 
 3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Open.
 
-![Step 3](images/4.jpg)
+<summary><b>**Step 3 Screenshot</b></summary>
+
+![Step 3](images/3.jpg)
+</details>
 
 4. After selecting the file, Visual Studio Code will install the extension. This process usually only takes a few seconds.
 5. Once the installation is complete, you may be prompted to reload Visual Studio Code to enable the newly installed extension. Click Reload Now if prompted.
