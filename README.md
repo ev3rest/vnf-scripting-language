@@ -34,8 +34,7 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 ![Step 7](images/7.jpg)
 
-8. [!TIP]
-    Type out and create novels!
+8. Type out and create novels!
 
 ## Known Issues
 
