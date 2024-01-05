@@ -41,6 +41,24 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 8. Create novels! c:
 
+
+<details>
+
+<summary>Building from source</summary>
+
+### Running from source
+
+1. Open new VSCode windows
+
+2. Open the source files folder: **File** - **Open Folder** and select your `vnf-scripting-language` folder.
+
+3. Press F5 to Run
+
+4. This will open a new instance of VSCode with the extension loaded. You should be able to create and open files here.
+
+</details>
+
+
 ## Known Issues
 
 - [ ] Inconsistent highlighting of certain instances of [].
