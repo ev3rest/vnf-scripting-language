@@ -19,9 +19,7 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
     Select `Install from VSIX` from the dropdown menu. This will open a file dialog.
 
-![Step 2 Part A](images/2a.jpg)
-<space>
-![Step 2 Part B](images/2b.jpg)
+![Step 2](images/2.jpg)
 
 3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Open.
 
