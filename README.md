@@ -11,10 +11,6 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 ### Installation
 
-<details>
-
-<summary>Installation Steps</summary>
-
 1. In Visual Studio Code, click on the square icon on the left sidebar to open the Extensions view. Alternatively, you can use the shortcut `Ctrl+Shift+X` (or `Cmd+Shift+X` on Mac).
 
 ![Step 1](images/1.jpg)
@@ -46,8 +42,6 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 ![Step 7](images/7.jpg)
 
 8. Create novels! c:
-
-</details>
 
 ## Known Issues
 
