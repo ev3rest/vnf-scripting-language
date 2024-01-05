@@ -1,0 +1,81 @@
+{
+    "name": "VNF",
+    "scopeName": "source.vnf",
+    "fileTypes": ["vnf"],
+    "patterns": [
+        {
+            "name": "comment.line.pound-sign.vnf",
+            "match": "#.*$"
+        },
+        {
+            "name": "string.double.vnf",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.vnf",
+                    "match": "\\\\[\\[\\]\\{\\}\\<\\>]"
+                },
+                {
+                    "name": "variable.other.angle-brackets.vnf",
+                    "match": "(?<!\\\\)(<)([^>]*)(?<!\\\\)(>)",
+                    "captures": {
+                        "1": {"name": "keyword.control.conditional.anglebracket.open.vnf"},
+                        "2": {"name": "content.anglebracket.vnf"},
+                        "3": {"name": "keyword.control.conditional.anglebracket.close.vnf"}
+                    }
+                },
+                {
+                    "name": "variable.other.square-brackets.vnf",
+                    "match": "(?<!\\\\)(\\[)([^\\]]*)(?<!\\\\)(\\])",
+                    "captures": {
+                        "1": {"name": "keyword.control.conditional.square-brackets.open.vnf"},
+                        "2": {"name": "content.square-brackets.vnf"},
+                        "3": {"name": "keyword.control.conditional.square-brackets.close.vnf"}
+                    }
+                },
+                {
+                    "name": "variable.other.curly-brackets.vnf",
+                    "match": "(?<!\\\\)(\\{)([a-zA-Z])(?<!\\\\)(\\})",
+                    "captures": {
+                        "1": {"name": "keyword.control.conditional.curly-brackets.open.vnf"},
+                        "2": {"name": "content.curly-brackets.vnf"},
+                        "3": {"name": "keyword.control.conditional.curly-brackets.close.vnf"}
+                    }
+                }
+            ]
+        },
+        {
+            "name": "keyword.standard.vnf",
+            "match": "(?<!\\w)at|enter|contains|jump|Random|End Random|choice(?!\\w)"
+        },
+        {
+            "name": "support.type.import.sections.vnf",
+            "match": "^(?:\t)?[A-Z]{2,}(?:\\s[A-Z]{2,})*"
+        },
+        {
+            "name": "variable.other.brackets.content.vnf",
+            "match": "(\\[)(.*?)(\\])|(\\{)(.*?)(\\})|(<)(.*?)(>)",
+            "captures": {
+                "1": {"name": "keyword.control.conditional.squarebracket.open.vnf"},
+                "2": {"name": "content.squarebracket.vnf"},
+                "3": {"name": "keyword.control.conditional.squarebracket.close.vnf"},
+                "4": {"name": "keyword.control.conditional.curlybracket.open.vnf"},
+                "5": {"name": "content.curlybracket.vnf"},
+                "6": {"name": "keyword.control.conditional.curlybracket.close.vnf"},
+                "7": {"name": "keyword.control.conditional.anglebracket.open.vnf"},
+                "8": {"name": "content.anglebracket.vnf"},
+                "9": {"name": "keyword.control.conditional.anglebracket.close.vnf"}
+            }
+        }
+        ,
+        {
+            "name": "entity.name.function.vnf",
+            "match": "(?<!\\w)[a-zA-Z]{2,}\\("
+        },
+        {
+            "name": "keyword.control.conditional.vnf",
+            "match": "(?<!\\w)if|else|endif(?!\\w)"
+        }
+    ]
+}

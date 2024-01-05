@@ -1,0 +1,29 @@
+{
+  "name": "vnf-scripting-language",
+  "displayName": "VNF Scripting Language",
+  "description": "VNF Scripting Language Extension",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "vnf",
+      "aliases": ["VNF", "vnf"],
+      "extensions": ["vnf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "vnf",
+      "scopeName": "source.vnf",
+      "path": "./syntaxes/vnf.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ev3rest/vnf-scripting-language"
+  }
+}
