@@ -44,9 +44,9 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 <details>
 
-<summary>Building from source</summary>
+<summary>Running from Source</summary>
 
-### Running from source
+### Running from Source
 
 1. Open new VSCode windows
 
