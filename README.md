@@ -69,4 +69,4 @@ Building from source would require installation of `vsce` npm package. You shoul
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#features">back to top</a>)</p>
