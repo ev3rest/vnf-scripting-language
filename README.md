@@ -38,7 +38,7 @@ This extension enables syntax highlighting for VNF scripting laguage files.
 
 ## Known Issues
 
-[ ] Inconsistent highlighting of certain instances of [].
+- [ ] Inconsistent highlighting of certain instances of [].
 
 <!-- LICENSE -->
 ## License
