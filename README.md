@@ -2,10 +2,10 @@
 
 This extension enables syntax highlighting for VNF scripting laguage files.
 
-## Installation
 <details>
+<summary>## Installation</summary>
 1. In Visual Studio Code, click on the square icon on the left sidebar to open the Extensions view. Alternatively, you can use the shortcut `Ctrl+Shift+X` (or `Cmd+Shift+X` on Mac).
-![Step 1](https://github.com/ev3rest/vnf-scripting-language/tree/main/images/1.jpg?raw=true)
+![Step 1](images/1.jpg)
 2. With the **Extensions** view open, look for the "..." menu (More Actions) at the top-right corner of the Extensions pane. Click on it to open the dropdown menu.
 
     Select `Install from VSIX` from the dropdown menu. This will open a file dialog.
