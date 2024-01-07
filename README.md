@@ -56,7 +56,9 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
 4. Navigate to the downloaded `.vsix` file and select 'Install'.
 5. Reload Visual Studio Code if prompted.
 6. Create a new file (`File` > `New File`).
-7. Type `VNF` and select the relevant option. Note: Make sure to name the file with a `.vnf` extension. Example: `Chapter 1.vnf`.
+7. Type `VNF` and select the relevant option. 
+
+    Note: Make sure to name the file with a `.vnf` extension. Example: `Chapter 1.vnf`.
 
    ![Create VNF File](images/installation/7.jpg "Create VNF File")
 
