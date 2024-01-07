@@ -1,94 +1,87 @@
+# VNF Scripting Language Extension for Visual Studio Code
+
+Enhance your Visual Studio Code experience with syntax highlighting for VNF scripting language files. This extension provides an intuitive and efficient workflow for scripting in VNF, making it easier and more enjoyable.
+
+## Table of Contents
+- [VNF Scripting Language Extension for Visual Studio Code](#vnf-scripting-language-extension-for-visual-studio-code)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Download](#download)
+    - [Installation](#installation)
+    - [Running from Source](#running-from-source)
+  - [Known Issues](#known-issues)
+  - [License](#license)
+
 ## Features
 
-This extension enables syntax highlighting for VNF scripting laguage files.
+- Syntax highlighting specifically designed for VNF scripting language.
 
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 ### Prerequisites
 
-- [Visual Studio Code (VSC)](https://code.visualstudio.com/download)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Download
 
-In order to download the extension, you have to proceed to [Releases](https://github.com/ev3rest/vnf-scripting-language/releases) tab and click on the latest version. The file you are looking for is the `.vsix` file.
+1. Visit the [Releases page](https://github.com/ev3rest/vnf-scripting-language/releases).
+2. Select the latest version.
+3. Download the `.vsix` file.
 
 <details>
+<summary>Visual Guide for Download</summary>
 
-<summary>Click here to see the screenshots</summary>
+1. Navigate to the [Releases tab](https://github.com/ev3rest/vnf-scripting-language/releases) on the right side of the repository.
+   
+   ![Releases Tab](images/download/1.jpg "Releases Tab")
 
-1. The [Releases](https://github.com/ev3rest/vnf-scripting-language/releases) tab can be found on the right side of this repo.
+2. Select the latest release and download the `.vsix` file.
 
-![Step 1](images/download/1.jpg)
+   ![Download .vsix file](images/download/2.jpg "Download .vsix File")
 
-2. Look for the latest version of the release. Under the release, you need the `.vsix` file.
-
-![Step 2](images/download/2.jpg)
-
-*Hint: 1.2 is newer than 1.0, 2.0 is newer than 1.2*
+   *Hint: Version numbers follow the format where 1.2 is newer than 1.0, and 2.0 is newer than 1.2*
 
 </details>
 
 ### Installation
 
-1. In Visual Studio Code, click on the square icon on the left sidebar to open the Extensions view. Alternatively, you can use the shortcut `Ctrl+Shift+X` (or `Cmd+Shift+X` on Mac).
+1. Open Visual Studio Code.
+2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X` on Mac).
+3. Click on the "..." menu and select `Install from VSIX`.
+   
+   ![Install from VSIX](images/installation/2.jpg "Install from VSIX")
 
-![Step 1](images/installation/1.jpg)
+4. Navigate to the downloaded `.vsix` file and select 'Install'.
+5. Reload Visual Studio Code if prompted.
+6. Create a new file (`File` > `New File`).
+7. Type `VNF` and select the relevant option. Note: Make sure to name the file with a `.vnf` extension. Example: `Chapter 1.vnf`.
 
-2. With the **Extensions** view open, look for the "..." menu (More Actions) at the top-right corner of the Extensions pane. Click on it to open the dropdown menu.
+   ![Create VNF File](images/installation/7.jpg "Create VNF File")
 
-    Select `Install from VSIX` from the dropdown menu. This will open a file dialog.
-
-![Step 2](images/installation/2.jpg)
-
-3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Install.
-
-![Step 3](images/installation/3.jpg)
-
-4. After selecting the file, Visual Studio Code will install the extension. This process usually only takes a few seconds.
-
-![Step 4](images/installation/4.jpg)
-
-5. Once the installation is complete, you may be prompted to reload Visual Studio Code to enable the newly installed extension. Click Reload Now if prompted.
-
-6. Click on **File** - **New File**.
-
-![Step 6](images/installation/6.jpg)
-
-7. Type in`VNF` and select the only available option.
-
-![Step 7](images/installation/7.jpg)
-
-8. Create novels! c:
+8. Start creating your novel with VNF!
 
 <details>
-
 <summary>Running from Source</summary>
 
 ### Running from Source
 
-1. Open new VSCode windows
+1. Open a new VSCode window.
+2. Go to `File` > `Open Folder` and select the `vnf-scripting-language` folder.
+3. Press `F5` to run.
+4. A new VSCode instance will open with the extension loaded.
 
-2. Open the source files folder: **File** - **Open Folder** and select your `vnf-scripting-language` folder.
-
-3. Press F5 to Run
-
-4. This will open a new instance of VSCode with the extension loaded. You should be able to create and open files here.
-
-Building from source would require installation of `vsce` npm package. You should be able to run `vsce package` in this repo's folder and get a packaged extension file (`.vsix`).
+*Note: Building from source requires the `vsce` npm package.*
 
 </details>
 
-
 ## Known Issues
 
-- [ ] Inconsistent highlighting of certain instances of [].
+- Inconsistent highlighting in some instances of `[]`.
 
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) for details.
 
 <p align="right">(<a href="#features">back to top</a>)</p>
