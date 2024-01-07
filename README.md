@@ -1,18 +1,24 @@
-# VNF Scripting Language Extension for Visual Studio Code
+<p align="center">
+  <img src="images/logo.png" alt="VNF Scripting Language Logo">
+</p>
+
+<h1 align="center">VNF Scripting Language Extension for Visual Studio Code</h1>
 
 Enhance your Visual Studio Code experience with syntax highlighting for VNF scripting language files. This extension provides an intuitive and efficient workflow for scripting in VNF, making it easier and more enjoyable.
 
+
 ## Table of Contents
-- [VNF Scripting Language Extension for Visual Studio Code](#vnf-scripting-language-extension-for-visual-studio-code)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Download](#download)
-    - [Installation](#installation)
-    - [Running from Source](#running-from-source)
-  - [Known Issues](#known-issues)
-  - [License](#license)
+- [Table of Contents](#table-of-contents)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Download](#download)
+  - [Installation](#installation)
+  - [Running from Source](#running-from-source)
+- [Known Issues](#known-issues)
+- [License](#license)
+- [FAQ / Troubleshooting](#faq--troubleshooting)
+- [Credits](#credits)
 
 ## Features
 
@@ -58,7 +64,7 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
 6. Create a new file (`File` > `New File`).
 7. Type `VNF` and select the relevant option. 
 
-    Note: Make sure to name the file with a `.vnf` extension. Example: `Chapter 1.vnf`.
+    *Note: Make sure to name the file with a `.vnf` extension. Example: `Chapter 1.vnf`.*
 
    ![Create VNF File](images/installation/7.jpg "Create VNF File")
 
@@ -74,7 +80,7 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
 3. Press `F5` to run.
 4. A new VSCode instance will open with the extension loaded.
 
-*Note: Building from source requires the `vsce` npm package.*
+*Note: Building from source requires the `vsce` npm package. To install it, run `npm install -g vsce`.*
 
 </details>
 
@@ -86,4 +92,17 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) for details.
 
-<p align="right">(<a href="#features">back to top</a>)</p>
+## FAQ / Troubleshooting
+
+*Q: Can I contribute to the development of this extension?*
+**A: Absolutely! Contributions are welcome.**
+
+## Credits
+
+**Prototyping & Testing:**  
+*wsan*
+
+**Acknowledgments:**  
+Special thanks to all the contributors who have helped make this extension a reality. Your efforts and dedication have been invaluable in developing and maintaining this project.
+
+<p align="right">(<a href="#vnf-scripting-language-extension-for-visual-studio-code">back to top</a>)</p>
