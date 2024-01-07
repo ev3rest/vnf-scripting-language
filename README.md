@@ -15,13 +15,19 @@ In order to download the extension, you have to proceed to [Releases](https://gi
 
 <details>
 
-<summary>Expand to see Screenshots</summary>
+<summary>Click here to see Screenshots</summary>
+
+1. The [Releases](https://github.com/ev3rest/vnf-scripting-language/releases) tab can be found on the right side of this repo.
 
 ![Step 1](images/download/1.jpg)
 
 <space>
 
+2. Look for the latest version of the release. Under the release, you need the `.vsix` file.
+
 ![Step 2](images/download/2.jpg)
+
+*Hint: 1.2 is newer than 1.0, 2.0 is newer than 1.2*
 
 </details>
 
