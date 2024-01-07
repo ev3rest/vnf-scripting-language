@@ -15,7 +15,7 @@ In order to download the extension, you have to proceed to [Releases](https://gi
 
 <details>
 
-<summary>Click here to see Screenshots</summary>
+<summary>Click here to see the screenshots</summary>
 
 1. The [Releases](https://github.com/ev3rest/vnf-scripting-language/releases) tab can be found on the right side of this repo.
 
