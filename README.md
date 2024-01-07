@@ -21,8 +21,6 @@ In order to download the extension, you have to proceed to [Releases](https://gi
 
 ![Step 1](images/download/1.jpg)
 
-<space>
-
 2. Look for the latest version of the release. Under the release, you need the `.vsix` file.
 
 ![Step 2](images/download/2.jpg)
