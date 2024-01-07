@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.2] - 2024-01-07
 
+### Added
+
+- Updated the README
+
+## [1.0.2] - 2024-01-07
+
 ### Fixed
 
 - in instances where tabs are represented by spaces, JUMP POINT and SECTOR also break
