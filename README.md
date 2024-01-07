@@ -2,6 +2,8 @@
 
 This extension enables syntax highlighting for VNF scripting laguage files.
 
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -41,7 +43,7 @@ In order to download the extension, you have to proceed to [Releases](https://gi
 
 ![Step 2](images/installation/2.jpg)
 
-3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Open.
+3. In the file dialog, navigate to the location where your .vsix file is saved. Select the file and click Install.
 
 ![Step 3](images/installation/3.jpg)
 
