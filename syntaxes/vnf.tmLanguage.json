@@ -51,7 +51,7 @@
         },
         {
             "name": "support.type.import.sections.vnf",
-            "match": "^(?:\t)*[A-Z]{2,}(?:\\s[A-Z]{2,})*"
+            "match": "^(?:[ \t])*[A-Z]{2,}(?:\\s[A-Z]{2,})*"
         },
         {
             "name": "variable.other.brackets.content.vnf",
