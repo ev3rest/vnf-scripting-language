@@ -49,7 +49,21 @@ To tailor syntax highlighting for your needs:
 
 1. **Modify Existing Patterns**: Update the regular expressions and scopes in the [vnf.tmLanguage.json](syntaxes/vnf.tmLanguage.json) file to alter the existing highlighting behavior.
 
-2. **Add New Patterns**: Introduce new patterns for unique syntactic elements of the VNF scripting language.
+    Current structure is as such:
+    - [Comments](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L7). Denoted by a `#` sign.
+    - [Strings](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L12). Bound by double quotes `" "`.
+      - [Escape Character](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L18). By default, denoted by `\`
+      - [Angled brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L23). Bound by `< >`.
+      - [Square brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L33). Bound by `[ ]`.
+      - [Curly brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L43). Bound by `{ }`.
+    - [Built-in keywords](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L55). Examples: `enter`, `contains`, `jump`, `at`, etc.
+    - [Capitalized words](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L60). Examples: `JUMP POINT` and `SECTOR`.
+    - [Standalone variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L65). Variables, bound by `[ ]`, `<>` and `{ }`.
+    - [Functions](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L82). Function calls in `function(argument: Optional)` format.
+    - [Conditional Stetements](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L87). Examples: `if`, `else`, `endif`.
+      
+
+2. **Add New Patterns**: Introduce new patterns for unique syntactic elements of the VNF scripting language. 
 
 3. **Test Changes**: Consistently test your modifications for accuracy, using files like [complex.vnf](examples/complex.vnf) that cover a broad spectrum of the VNF syntax.
 
