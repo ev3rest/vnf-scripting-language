@@ -4,19 +4,23 @@
     "fileTypes": ["vnf"],
     "patterns": [
         {
+            "_comment": "Comments. Matches on # sign.",
             "name": "comment.line.pound-sign.vnf",
             "match": "#.*$"
         },
         {
+            "_comment": "Strings. In VNF, they are bound by double quotes.",
             "name": "string.double.vnf",
             "begin": "\"",
             "end": "\"",
             "patterns": [
                 {
+                    "_comment": "Escape character.",
                     "name": "constant.character.escape.vnf",
                     "match": "\\\\[\\[\\]\\{\\}\\<\\>]"
                 },
                 {
+                    "_comment": "Separate highlighting for nested variables. Angled brackets.",
                     "name": "variable.other.angle-brackets.vnf",
                     "match": "(?<!\\\\)(<)([^>]*)(?<!\\\\)(>)",
                     "captures": {
@@ -26,6 +30,7 @@
                     }
                 },
                 {
+                    "_comment": "Separate highlighting for nested variables. Square brackets.",
                     "name": "variable.other.square-brackets.vnf",
                     "match": "(?<!\\\\)(\\[)([^\\]]*)(?<!\\\\)(\\])",
                     "captures": {
@@ -35,6 +40,7 @@
                     }
                 },
                 {
+                    "_comment": "Separate highlighting for nested variables. Curly brackets.",
                     "name": "variable.other.curly-brackets.vnf",
                     "match": "(?<!\\\\)(\\{)([a-zA-Z])(?<!\\\\)(\\})",
                     "captures": {
@@ -46,14 +52,17 @@
             ]
         },
         {
+            "_comment": "Built-in keywords.",
             "name": "keyword.standard.vnf",
             "match": "(?<!\\w)at|enter|contains|jump|Random|End Random|choice(?!\\w)"
         },
         {
+            "_comment": "CAPITALIZED words at the beginning of a line, such as JUMP POINT and SECTOR.",
             "name": "support.type.import.sections.vnf",
             "match": "^(?:[ \t])*[A-Z]{2,}(?:\\s[A-Z]{2,})*"
         },
         {
+            "_comment": "Variables, not nested.",
             "name": "variable.other.brackets.content.vnf",
             "match": "(\\[)(.*?)(\\])|(\\{)(.*?)(\\})|(<)(.*?)(>)",
             "captures": {
@@ -70,10 +79,12 @@
         }
         ,
         {
+            "_comment": "Functions.",
             "name": "entity.name.function.vnf",
             "match": "(?<!\\w)[a-zA-Z]{2,}\\("
         },
         {
+            "_comment": "Conditional statements. Such as if, else, endif.",
             "name": "keyword.control.conditional.vnf",
             "match": "(?<!\\w)if|else|endif(?!\\w)"
         }
