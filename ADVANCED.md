@@ -47,23 +47,32 @@ TextMate grammars are crucial for providing syntax highlighting in text editors 
 
 To tailor syntax highlighting for your needs:
 
-1. **Modify Existing Patterns**: Update the regular expressions and scopes in the [vnf.tmLanguage.json](syntaxes/vnf.tmLanguage.json) file to alter the existing highlighting behavior.
+1. **Modify Existing Patterns**: Enhance or adjust the syntax highlighting by editing the regular expressions and scopes in the [vnf.tmLanguage.json](syntaxes/vnf.tmLanguage.json) file. This file contains the rules defining how different language constructs in VNF are highlighted. The current structure includes:
 
-    Current structure is as such:
-    - [Comments](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L7). Denoted by a `#` sign.
-    - [Strings](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L12). Bound by double quotes `" "`.
-      - [Escape Character](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L18). By default, denoted by `\`
-      - [Angled brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L23). Bound by `< >`.
-      - [Square brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L33). Bound by `[ ]`.
-      - [Curly brackets nested variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L43). Bound by `{ }`.
-    - [Built-in keywords](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L55). Examples: `enter`, `contains`, `jump`, `at`, etc.
-    - [Capitalized words](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L60). Examples: `JUMP POINT` and `SECTOR`.
-    - [Standalone variables](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L65). Variables, bound by `[ ]`, `<>` and `{ }`.
-    - [Functions](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L82). Function calls in `function(argument: Optional)` format.
-    - [Conditional Stetements](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L87). Examples: `if`, `else`, `endif`.
-      
+    - **Comments**: Marked by a `#` sign. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L7)
+    - **Strings**: Enclosed within double quotes `" "`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L12)
+      - **Escape Characters**: Typically denoted by `\`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L18)
+      - **Angled Brackets Nested Variables**: Bound by `< >`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L23)
+      - **Square Brackets Nested Variables**: Bound by `[ ]`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L33)
+      - **Curly Brackets Nested Variables**: Bound by `{ }`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L43)
+    - **Built-in Keywords**: Such as `enter`, `contains`, `jump`, `at`, etc. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L55)
+    - **Capitalized Words**: Examples include `JUMP POINT` and `SECTOR`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L60)
+    - **Standalone Variables**: Variables encased in `[ ]`, `<>` and `{ }`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L65)
+    - **Functions**: Formatted as `function(argument: Optional)`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L82)
+    - **Conditional Statements**: Including `if`, `else`, `endif`. [View Definition](https://github.com/ev3rest/vnf-scripting-language/blob/759d295568083007eda197f88d8fbd66d1231f59/syntaxes/vnf.tmLanguage.json#L87)
+    
+    Feel free to adjust or expand these patterns to better align with your needs.
 
-2. **Add New Patterns**: Introduce new patterns for unique syntactic elements of the VNF scripting language. 
+2. **Add New Patterns**: Introduce new patterns for unique syntactic elements of the VNF scripting language.
+
+    All new patterns must be added in the following format:
+    ```
+    {
+    "comment": "Optional. Describe what this pattern does.",
+    "name": "scope.name",
+    "matches": "put your regex here"
+    }
+    ```
 
 3. **Test Changes**: Consistently test your modifications for accuracy, using files like [complex.vnf](examples/complex.vnf) that cover a broad spectrum of the VNF syntax.
 
