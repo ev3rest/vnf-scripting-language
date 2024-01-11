@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo/VNF_logo.png" alt="VNF Scripting Language Logo">
+  <img src="images/logo/VNF_Logo.png" alt="VNF Scripting Language Logo">
 </p>
 
 <h1 align="center">VNF Scripting Language Extension for Visual Studio Code</h1>

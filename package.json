@@ -2,7 +2,7 @@
   "name": "vnf-scripting-language",
   "displayName": "VNF Scripting Language",
   "description": "VNF Scripting Language Extension",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "ev3rest",
   "engines": {
     "vscode": "^1.85.0"

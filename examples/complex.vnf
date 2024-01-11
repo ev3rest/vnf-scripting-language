@@ -1,0 +1,72 @@
+#This is a conversation between the main character and the shopkeeper
+#Set the background overlay to the shop background while speaking to the shopkeeper.
+SetBackgroundMedia("The Shop" -spd 1.5 -blend feathers)
+enter Shopkeeper at 1 [happy] "Welcome back, <mainChar>!"
+
+#Only ask about the journey if it has been started
+if (test.journeyStarted)
+	jump <Post Journey>
+else
+	jump <Pre Journey>
+endif
+
+#Post Journey is only read if you have started the journey already.
+SECTOR: Post Journey
+	Shopkeeper [default] "I trust your journey is going well?{c}Run into any monsters?"
+	choice "Have you run into any monsters?"
+	{
+		-Yes
+			"Oh, brilliant! Then you must be here for the expensive - I mean, necessary medical potions?"
+		-No
+			"Well, it's only a matter of time before youy are gravely wounded by one!{c}Might I interest you in a potion?"
+			"Plan for the best, but prepare for the worst!{a} That's what I always say!"
+	}
+
+	jump <Browse Wares>
+
+
+#Pre Journey is only read if you have not started the journey already
+SECTOR: Pre Journey
+	Shopkeeper [default] "Wait, you haven't started your journey yet?{c}Ah, no doubt you see the necessity of my valuables for your cause, yes?"
+	jump <Browse Wares>
+
+
+
+#Browse Wares is read when the shop is opened
+SECTOR: Browse Wares
+	Shopkeeper [smile] "Have a look at my merchandise! Everything is for sale!"
+	
+	JUMP POINT: Shop Choice
+	choice "Buy Something?"
+	{
+		-Yes
+			openShop()
+			<end>
+		-No
+			jump <leave>
+		-I Need Something Specific
+			ShopKeeper [curious] "Oh, may I enquire what it is you're looking for?"
+			Input "What are you looking for?"
+			<mainChar> "I'm looking for <input>."
+
+			if (shop contains <input>)
+				Shopkeeper [smile] "Yes, of course! I always carry a supply!"
+				openShop()
+				<end>
+			else
+				Shopkeeper [default] "Mmmm... I'm afraid I don't carry any of that. Might I interest you in something else?"
+				jump <Shop Choice>
+	}
+
+SECTOR: Leave
+	Random
+		v0:5
+			Shopkeeper [happy] "Farewell! I hope to see you soon!"
+		v1:4
+			Shopkeeper [happy] "Take care! And don't forget - you're my number one customer!"
+	End Random
+
+	#Clear the background and restore normal camera world view when leaving the shop...
+	ClearBackgroundMedia()
+
+
