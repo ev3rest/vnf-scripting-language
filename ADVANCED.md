@@ -11,6 +11,7 @@ This document provides detailed guidance and insights for the VNF Scripting Lang
     - [How Syntax Highlighting Works with TextMate Grammars](#how-syntax-highlighting-works-with-textmate-grammars)
     - [Customizing Syntax Highlighting](#customizing-syntax-highlighting)
   - [Creating Custom Themes](#creating-custom-themes)
+  - [Modifying the Icon](#modifying-the-icon)
   - [Contributing Customizations](#contributing-customizations)
 
 ## Understanding TextMate Grammars
@@ -79,6 +80,10 @@ To tailor syntax highlighting for your needs:
 ## Creating Custom Themes
 
 Developing custom themes to complement the syntax highlighting is possible, though not covered here in detail. The [official documentation](https://code.visualstudio.com/api/extension-guides/color-theme#syntax-colors) provides comprehensive guidance on this topic.
+
+## Modifying the Icon
+
+If you'd like to modify the extension icon, we have provided the `.psd` and `.clip` files [here](images/logo/). Modifying the [VNF_logo.png](images/logo/VNF_Logo.png) file will change the logo of the extension.
 
 ## Contributing Customizations
 
