@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" alt="VNF Scripting Language Logo">
+  <img src="images/logo/VNF_logo.png" alt="VNF Scripting Language Logo">
 </p>
 
 <h1 align="center">VNF Scripting Language Extension for Visual Studio Code</h1>
@@ -15,6 +15,7 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
   - [Download](#download)
   - [Installation](#installation)
   - [Running from Source](#running-from-source)
+- [Advanced Use \& Customization](#advanced-use--customization)
 - [Known Issues](#known-issues)
 - [License](#license)
 - [FAQ / Troubleshooting](#faq--troubleshooting)
@@ -83,6 +84,14 @@ Enhance your Visual Studio Code experience with syntax highlighting for VNF scri
 *Note: Building from source requires the `vsce` npm package. To install it, run `npm install -g vsce`.*
 
 </details>
+
+## Advanced Use & Customization
+
+This extension utilizes VS Code's tokenization engine.
+
+> VS Code's tokenization engine is powered by TextMate grammars. TextMate grammars are a structured collection of regular expressions and are written as a plist (XML) or JSON files.
+
+For further documentation, please see the [ADVANCED.md](ADVANCED.md) file.
 
 ## Known Issues
 
