@@ -23,6 +23,7 @@
       "path": "./syntaxes/vnf.tmLanguage.json"
     }]
   },
+  "icon": "images/logo/VNF_Logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/ev3rest/vnf-scripting-language"
