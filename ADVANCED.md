@@ -1,96 +1,68 @@
 # Advanced Use and Customization
 
-This document provides advanced guidelines and information for the VNF Scripting Language Extension for Visual Studio Code. It is intended for users who want to delve deeper into the extension's capabilities, customize it to their needs, and understand its underlying mechanisms.
+This document provides detailed guidance and insights for the VNF Scripting Language Extension for Visual Studio Code. It is designed for users who wish to explore the extension's advanced capabilities, customize it according to their needs, and understand its technical details.
 
 ## Table of Contents
-- [Tokenization Engine](#tokenization-engine)
-- [Custom Syntax Highlighting](#custom-syntax-highlighting)
-- [Creating Custom Themes](#creating-custom-themes)
-- [Contributing Customizations](#contributing-customizations)
+- [Advanced Use and Customization](#advanced-use-and-customization)
+  - [Table of Contents](#table-of-contents)
+  - [Understanding TextMate Grammars](#understanding-textmate-grammars)
+    - [Overview of TextMate Grammars](#overview-of-textmate-grammars)
+    - [Key Components of a TextMate Grammar File](#key-components-of-a-textmate-grammar-file)
+    - [How Syntax Highlighting Works with TextMate Grammars](#how-syntax-highlighting-works-with-textmate-grammars)
+    - [Customizing Syntax Highlighting](#customizing-syntax-highlighting)
+  - [Creating Custom Themes](#creating-custom-themes)
+  - [Contributing Customizations](#contributing-customizations)
 
-## Tokenization Engine
+## Understanding TextMate Grammars
 
-The VNF Scripting Language Extension utilizes VS Code's powerful tokenization engine, which is powered by TextMate grammars. TextMate grammars are structured collections of regular expressions and can be written in plist (XML) or JSON format.
+TextMate grammars are crucial for providing syntax highlighting in text editors such as Visual Studio Code. They define the rules for how text is highlighted based on its syntactic structure.
 
-### Understanding TextMate Grammars
+### Overview of TextMate Grammars
 
-TextMate grammars are used to provide syntax highlighting in text editors like Visual Studio Code. They define how pieces of text should be highlighted based on their syntactic structure.
+1. **Scope-Based Matching**: TextMate grammars assign scopes to text segments in a document, corresponding to syntactic or semantic elements like keywords, variables, or comments.
 
-#### Overview of TextMate Grammars
+2. **Regular Expressions**: These grammars utilize regular expressions to detect code elements, assigning a specific scope to matched text.
 
-1. **Scope-Based Matching**: TextMate grammars work by assigning scopes to pieces of text in a document. Each scope corresponds to a syntactic or semantic element of the language, like a keyword, variable, or comment.
+3. **Grammar Files**: These are JSON or XML (plist) files containing patterns of regular expressions and their associated scopes.
 
-2. **Regular Expressions**: These grammars use regular expressions to identify elements in the code. A matched text is assigned a specific scope.
+### Key Components of a TextMate Grammar File
 
-3. **Grammar Files**: Defined in JSON or XML (plist) files, these include a series of patterns with regular expressions and corresponding scopes.
+- **Patterns**: Essential elements of the grammar, consisting of regular expressions and their corresponding scopes. These can range from simple keyword patterns to complex nested structures.
 
-#### Key Components of a TextMate Grammar File
+- **Repository**: A set of reusable named patterns, helping to organize and streamline complex grammars.
 
-- **Patterns**: The core of the grammar. Patterns include regular expressions and the scope applied when the expression matches. They can be simple (for keywords) or complex (for nested structures).
+- **Includes**: Allows grammars to include other grammars, beneficial for languages that incorporate multiple languages.
 
-- **Repository**: A collection of reusable named patterns, aiding in organizing complex grammars.
+- **Name and ScopeName**: The file begins with these elements, with ScopeName serving as the grammar's unique identifier.
 
-- **Includes**: Grammars can include other grammars, useful for languages embedding other languages.
+### How Syntax Highlighting Works with TextMate Grammars
 
-- **Name and ScopeName**: The file starts with a name and a scopeName, the latter being a unique identifier for the grammar.
+1. **Tokenization**: The editor breaks down text into tokens (like keywords and strings) using the grammar's patterns.
 
-#### How Syntax Highlighting Works with TextMate Grammars
+2. **Applying Scopes**: Each token is assigned a scope based on its pattern match.
 
-1. **Tokenization**: The editor tokenizes the text, breaking it into identifiable pieces (tokens) like keywords and strings.
+3. **Styling**: The editor styles these scopes according to the active theme, defining the visual presentation of the highlighted text.
 
-2. **Applying Scopes**: Each token is assigned a scope based on the matching patterns.
+### Customizing Syntax Highlighting
 
-3. **Styling**: The editor applies styles to these scopes using the current theme, determining the appearance of the highlighted text.
+To tailor syntax highlighting for your needs:
 
-#### Customizing Syntax Highlighting
+1. **Modify Existing Patterns**: Update the regular expressions and scopes in the [vnf.tmLanguage.json](syntaxes/vnf.tmLanguage.json) file to alter the existing highlighting behavior.
 
-To customize syntax highlighting:
+2. **Add New Patterns**: Introduce new patterns for unique syntactic elements of the VNF scripting language.
 
-1. **Modify Existing Patterns**: Adjust regular expressions and scopes in existing patterns to change the highlighting. The language file with the corresponding grammars can be found in [vnf.tmLanguage.json](syntaxes/vnf.tmLanguage.json).
-
-2. **Add New Patterns**: Define new patterns for additional syntactic elements specific to your language.
-
-3. **Test Changes**: Regularly test your changes to ensure correct highlighting. You [complex.vnf](examples/complex.vnf) for testing purposes, as it covers a big portion of VNF's syntax.
-
-
-## Custom Syntax Highlighting
-
-Custom syntax highlighting can be adjusted or extended by modifying the TextMate grammar files.
-
-### Editing Grammar Files
-- Location of grammar files.
-- Basic guidelines on editing these files.
-
-### Testing Changes
-- How to test changes to syntax highlighting.
-- Tips for effective testing.
+3. **Test Changes**: Consistently test your modifications for accuracy, using files like [complex.vnf](examples/complex.vnf) that cover a broad spectrum of the VNF syntax.
 
 ## Creating Custom Themes
 
-You can create custom themes that complement or enhance the syntax highlighting provided by the extension.
-
-### Theme Structure
-- Basic structure of a VS Code theme.
-- How to define colors and styles.
-
-### Developing Your Theme
-- Steps to develop a custom theme.
-- Tips for theme design.
+Developing custom themes to complement the syntax highlighting is possible, though not covered here in detail. The [official documentation](https://code.visualstudio.com/api/extension-guides/color-theme#syntax-colors) provides comprehensive guidance on this topic.
 
 ## Contributing Customizations
 
-We encourage contributions to the extension, including new features, bug fixes, and enhancements.
-
-### Contribution Guidelines
-- Steps to contribute to the extension.
-- Coding standards and best practices.
-
-### Submitting Contributions
-- Process for submitting contributions.
-- Review and acceptance criteria.
+Contributions of new features, bug fixes, and enhancements to the extension are highly encouraged and appreciated.
 
 ---
 
-For more detailed information about VS Code's extension capabilities and TextMate grammars, refer to the [official VS Code documentation](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) and [TextMate grammars documentation](https://macromates.com/manual/en/language_grammars).
+For additional information about VS Code's extension features and TextMate grammars, consult the [official VS Code documentation](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) and the [TextMate grammars manual](https://macromates.com/manual/en/language_grammars).
 
 <p align="right">(<a href="#advanced-use-and-customization">back to top</a>)</p>
